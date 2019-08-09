@@ -1,0 +1,21 @@
+{
+  "name": "com.unity.xr.magicleap",
+  "displayName": "Magic Leap",
+  "version": "2.0.0-preview.19",
+  "unity": "2019.1",
+  "description": "Provides rendering and spatial mapping support for Magic Leap.",
+  "keywords": [
+    "magicleap",
+    "ar",
+    "augmented",
+    "xr",
+    "reality",
+    "xreditorsubsystem"
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.cds.internal.unity3d.com:unity/xr.sdk.magicleap.git",
+    "revision": "2e0f9139cb28cb9969ea4817f2c6aff64dda2d67"
+  }
+}
