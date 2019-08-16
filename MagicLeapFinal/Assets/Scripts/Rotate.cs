@@ -12,7 +12,7 @@ public class Rotate : MonoBehaviour
     //bool for whether the object spins or looks at target, set to true but can be changed manually in the editor
     public bool lookAtTarget = true;
     //distance for when to destroy the zombie due to hitting target
-    public float destroyDistance = .5f;
+    public float destroyDistance;
     //float for the zombie health
     public float health;
     //audio clip for the zombie moan along with audio source to play from
@@ -20,6 +20,8 @@ public class Rotate : MonoBehaviour
     public AudioSource audioPlayer;
     //the controller for future reference
     public Controller CC;
+
+    public int damage;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +53,9 @@ public class Rotate : MonoBehaviour
         if (Vector3.Distance(tf.position, target.position) <= destroyDistance)
         {
             CC.zombieEscaped = CC.zombieEscaped + 1;
+            CC.damageToTake = damage;
             CC.SetZombiesEscaped();
+            CC.SetPlayerHealth();
             Destroy(gameObject);
         }
     }
